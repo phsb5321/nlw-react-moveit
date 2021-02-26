@@ -60,7 +60,10 @@ export function CountDown() {
                     type="button"
                     className={styles.countDownButton}
                     onClick={e => resetCountDown()}>
-                    Abandonar Ciclo
+                    Ciclo Terminou
+                        <img
+                            src="icons/check_circle.svg"
+                            alt="check_circle"/>
                 </button >
             ) : (
                     <React.Fragment>
@@ -69,7 +72,7 @@ export function CountDown() {
                                 type="button"
                                 className={`${styles.countDownButton} ${styles.countDownButtonActive}`}
                                 onClick={e => resetCountDown()}>
-                                Ciclo Terminou
+                                Abandonar Ciclo
                             </button>
                         ) : (
                                 <button
@@ -77,7 +80,6 @@ export function CountDown() {
                                     className={styles.countDownButton}
                                     onClick={e => startCountDown()} >
                                     Iniciar Ciclo
-
                                 </button>
                             )
                         }
